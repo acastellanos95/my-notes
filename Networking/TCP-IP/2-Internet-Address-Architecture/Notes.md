@@ -26,7 +26,39 @@ IPv6 addresses consists of 128-bit nonnegative integer. Representation:
 For an address we will have a __Net Number__ to identify the network on which the machine's interface using that IP is 
 to be found, and a __Host Number__ to identify the host in the network. A partitioning of IP addresses was given (IPv4):
 
-- Class A:
+- Class A (unicast-special):
 
 |-- Net Number --|-- Host --|
-| 0 | 7 bits     | 24 bits  | __Range__: 0.0.0.0 - 127.255.255.255 __High Order Bits__: 
+| 0 | 7 bits     | 24 bits  |
+__Range__: 0.0.0.0 - 127.255.255.255 __High Order Bits__: 0 __% of addresses__: 50% __No. of networks__: 128
+__No. of hosts__: 16,777,216
+
+- Class B (unicast-special):
+
+| -- Net Number --|-- Host --|
+| 10 | 14 bits    | 16 bits  |
+__Range__: 128.0.0.0 - 191.255.255.255 __High Order Bits__: 10 __% of addresses__: 25% __No. of networks__: 16,384
+__No. of hosts__: 65,336
+
+- Class C (unicast-special):
+
+| -- Net Number --|-- Host --|
+| 110 | 21 bits   | 8 bits   |
+__Range__: 192.0.0.0 - 223.255.255.255 __High Order Bits__: 110 __% of addresses__: 12.5% __No. of networks__: 2,097,152
+__No. of hosts__: 256
+
+- Class D (multicast):
+
+| -- Bits --|-- multicast address --|
+|    1110   |         28 bits       |
+__Range__: 224.0.0.0 - 239.255.255.255 __High Order Bits__: 1110 __% of addresses__: 6.25% __No. of networks__: N/A
+__No. of hosts__: N/A
+
+- Class E (Reserved):
+
+| -- Bits --|-- multicast address --|
+|    1111   |         28 bits       |
+__Range__: 240.0.0.0 - 255.255.255.255 __High Order Bits__: 1111 __% of addresses__: 6.25% __No. of networks__: N/A
+__No. of hosts__: N/A
+
+## Subnet Addressing
